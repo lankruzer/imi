@@ -1,0 +1,105 @@
+---
+title: Index page | imi
+---
+{% extends "layouts/_index-layout.html" %}
+
+{% block content %}
+	
+	<ul class="mobile-menu">
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-activities')}}
+				<span class="mobile-menu-li-link__text">Activities</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-restaurants')}}
+				<span class="mobile-menu-li-link__text">Restaurants</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-shopping')}}
+				<span class="mobile-menu-li-link__text">Shopping</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-car')}}
+				<span class="mobile-menu-li-link__text">Rentals</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-service')}}
+				<span class="mobile-menu-li-link__text">Service</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-transportation')}}
+				<span class="mobile-menu-li-link__text">Transportaion</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-food')}}
+				<span class="mobile-menu-li-link__text">Food Delivery</span>
+			</a>
+		</li>
+		<li class="mobile-menu-li">
+			<a href="#" class="mobile-menu-li-link">
+				{{mixins.icon('icon-info')}}
+				<span class="mobile-menu-li-link__text">Information</span>
+			</a>
+		</li>
+	</ul>	
+
+	<section class="index-screen">
+
+		<div class="container">
+		
+			<div class="slider">
+				<article class="slider-slide">
+					<h2 class="slider-slide__title">Kualoa Ranch</h2>
+					<div class="slider-slide-img">
+						<img src="img/pic-1.jpg" alt="" class="slider-slide-img__img">
+					</div>
+					<div class="slider-slide-description">
+						<div class="slider-slide-description__title">Venue Description:</div>
+						<div class="slider-slide-description__text">Hot spot provider about us info, address, phone, clickable link to own page if paid advertiser.specials on location can be added here in a form of clickable banners or downloadable coupons code.</div>
+					</div>
+				</article>
+
+				<article class="slider-slide">
+					<h2 class="slider-slide__title">Kualoa Ranch</h2>
+					<div class="slider-slide-img">
+						<img src="img/pic-1.jpg" alt="" class="slider-slide-img__img">
+					</div>
+					<div class="slider-slide-description">
+						<div class="slider-slide-description__title">Venue Description:</div>
+						<div class="slider-slide-description__text">Hot spot provider about us info, address, phone, clickable link to own page if paid advertiser.specials on location can be added here in a form of clickable banners or downloadable coupons code.</div>
+					</div>
+				</article>
+
+				<article class="slider-slide">
+					<h2 class="slider-slide__title">Kualoa Ranch</h2>
+					<div class="slider-slide-img">
+						<img src="img/pic-1.jpg" alt="" class="slider-slide-img__img">
+					</div>
+					<div class="slider-slide-description">
+						<div class="slider-slide-description__title">Venue Description:</div>
+						<div class="slider-slide-description__text">Hot spot provider about us info, address, phone, clickable link to own page if paid advertiser.specials on location can be added here in a form of clickable banners or downloadable coupons code.</div>
+					</div>
+				</article>
+			</div>
+
+			 {% include "partials/_ads.html" %}
+
+		</div>
+
+	</section>
+	
+	
+{% endblock %}

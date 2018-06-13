@@ -1,0 +1,99 @@
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	box-sizing: border-box
+	padding: 20px 45px 
+	width: 100%
+	+r(1400)
+		padding: 15px 25px
+	+r(1200)
+		padding: 15px
+	+r(992)
+		padding: 20px 25px
+	+r(768)
+		padding: 20px
+	&-logo
+		position: relative
+		z-index: 20
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 121px
+		max-height: 119px
+		+r(1600)
+			max-width: 100px
+		+r(1400)
+			max-width: 80px
+		+r(1200)
+			max-width: 60px
+		+r(992)
+			max-width: 100px
+		+r(768)
+			max-width: 70px
+		&__img
+			max-width: 100%
+			max-height: 100%
+			width: auto
+			height: auto
+	&-nav
+		+r(992)
+			position: fixed
+			top: 0
+			left: 0
+			z-index: 15
+			box-sizing: border-box
+			padding-top: 140px
+			padding-bottom: 50px
+			width: 100%
+			height: 100%
+			background-color: $text-dark
+			overflow-y: auto
+			transform: translateY(-100%)
+			transition: .25s
+			&.is-show
+				transform: translateY(0)
+		+r(768)
+			padding-top: 100px
+		&-list
+			display: flex
+			margin: 0
+			padding: 0
+			list-style: none
+			+r(992)
+				flex-direction: column
+				align-items: center
+			&-li
+				&__link
+					display: block
+					padding: 22px
+					font-family: $lato
+					+fs(20)
+					+lh(20, 20)
+					+ls(4)
+					text-decoration: none
+					color: $text-light
+					transition: .25s
+					+r(1600)
+						padding: 16px
+					+r(1400)
+						padding: 10px
+						+fs(18)
+					+r(1200)
+						+fs(16)
+					&:hover
+						color: $text-dark
+
+		&__button
+			display: none
+			+r(992)
+				position: relative
+				z-index: 20
+				display: block
+				width: 78px
+				height: 50px
+				+fs(0)
+				+lh(0, 0)
+				background-color: transparent
+			+r(768)
+				width: 60px

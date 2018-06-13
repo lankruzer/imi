@@ -1,0 +1,34 @@
+.banners
+	padding-top: 10px
+	border-top: 1px solid $text-dark
+	&__title
+		margin-bottom: 15px
+		font-family: $lato
+		+fs(28px)
+		font-weight: 800
+		font-style: italic
+		color: $text-dark
+		+r(600)
+			+fs(24)
+		+r(400)
+			+fs(22)
+	&-wrapper
+		display: flex
+		flex-wrap: wrap
+		margin-right: -15px
+		margin-left: -15px
+		&__banner
+			box-sizing: border-box
+			padding: 0 15px
+			width: perc(3, 1)
+			+r(700)
+				width: 100%
+				&:not(:first-of-type)
+					display: none
+
+.banner
+	margin-bottom: 15px
+	&__img
+		display: block
+		width: 100%
+		height: auto

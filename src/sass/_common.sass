@@ -1,5 +1,18 @@
 body
+	font-family: $lato
+	+fs(28.9)
+	+lh(28.9, 36)
+	+ls(4)
+	font-style: italic
+	fotn-weight: 400
 	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+	&.is-no-scroll
+		height: 100%
+		overflow: hidden
 
+.container
+	margin: 0 auto
+	padding: 0 15px
+	box-sizing: border-box
+	width: 100%
+	max-width: 1140px
