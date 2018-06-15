@@ -1,10 +1,33 @@
 .header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 50
 	display: flex
 	justify-content: space-between
 	align-items: center
 	box-sizing: border-box
 	padding: 20px 45px 
 	width: 100%
+	transition: .5s
+	&_dark
+		padding: 15px 45px 
+		background-color: $text-dark
+		.header
+			&-logo
+				max-width: 90px
+			&-nav-list
+				&-dropdown
+					background-color: $text-dark
+					&-li:hover
+						.header-nav-list-dropdown-li__link
+							color: darken($sky, 40)
+				&-li:hover
+					.header-nav-list-li
+						&__link
+							color: darken($sky, 40)
+						&__caret
+							border-top-color: darken($sky, 40)
 	+r(1400)
 		padding: 15px 25px
 	+r(1200)
@@ -21,6 +44,7 @@
 		align-items: center
 		max-width: 121px
 		max-height: 119px
+		transition: .5s
 		+r(1600)
 			max-width: 100px
 		+r(1400)
@@ -64,6 +88,7 @@
 				flex-direction: column
 				align-items: center
 			&-li
+				position: relative
 				&__link
 					display: block
 					padding: 22px
@@ -81,8 +106,61 @@
 						+fs(18)
 					+r(1200)
 						+fs(16)
-					&:hover
-						color: $text-dark
+				&:hover
+					.header-nav-list-li
+						&__link
+							color: $text-dark
+						&__caret
+							border-top-color: $text-dark
+						// .header_dark 
+						// 	.header-nav-list-li__link
+						// 		color: darken($sky, 40)
+						// 	.header-nav-list-li__caret
+						// 		border-top-color: darken($sky, 40)
+				&__caret
+					display: inline-block
+					vertical-align: middle
+					box-sizing: border-box
+					width: 0
+					height: 0
+					+fs(0)
+					border: 
+						top: 10px solid $text-light
+						left: 5px solid transparent
+						right: 5px solid transparent
+					background-color: transparent
+				&_dropdown:hover
+					.header-nav-list-dropdown
+						opacity: 1
+						visibility: visible
+						transform: translateY(0)
+			&-dropdown
+				position: absolute
+				top: 100%
+				left: 0%
+				box-sizing: border-box
+				padding-bottom: 20px
+				width: 200px
+				max-height: 80vh
+				transition: .25s
+				opacity: 0
+				transform: translateY(-100%)
+				overflow-y: auto
+				visibility: hidden
+				&-li
+					&__link
+						display: block
+						padding: 11px 22px
+						font-family: $lato
+						+fs(18)
+						+lh(18, 18)
+						+ls(4)
+						text-decoration: none
+						color: $text-light
+						transition: .25s
+						&:hover
+							color: $text-dark
+
 
 		&__button
 			display: none

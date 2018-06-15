@@ -264,7 +264,12 @@
 			height: 100%
 			fill: $marine
 			stroke: $text-light
+			animation: rotate 10s linear infinite
+			animation-play-state: paused
 			transition: .25s
+		&:hover
+			.icon
+				animation-play-state: running
 		&__text
 			position: relative
 			z-index: 5
@@ -295,3 +300,8 @@
 			+fs(20)
 		+r(1000)
 			+fs(18)
+
+
+@keyframes rotate
+	100%
+		transform: rotate(360deg)

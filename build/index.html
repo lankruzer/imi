@@ -9,61 +9,88 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body>
-    <section class="first-screen first-screen_index">
-      <!-- begin header -->
-      <header class="header">
-        <a href="index.html" class="header-logo">
-          <img src="img/header-logo.png" alt="" class="header-logo__img"> </a>
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Venues</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Activities</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Restaurants</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Shopping</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Car Rentals</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Transportation</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Servicer</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Food Delivery</a>
-            </li>
-            <li class="header-nav-list-li">
-              <a href="#" class="header-nav-list-li__link">Information</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header-nav__button" type="button"> Menu
-          <span class="lines"></span>
-        </button>
-      </header>
-      <!-- end header -->
-      <h1 class="first-screen__title">Circle Island Guided Tour </h1>
-      <a href="#index-screen" class="first-screen-link link-to">
-        <span class="first-screen-link__text">Start here</span>
-        <span class="first-screen-link-img">
-          <svg class="icon icon-icon-mouse">
-            <use xlink:href="img/sprite.svg#icon-icon-mouse"></use>
-          </svg>
-        </span>
-      </a>
-      <div class="first-screen-weather">
-        <img src="img/weather.png" alt=""> </div>
-    </section>
+    <!-- begin header -->
+    <header class="header">
+      <a href="index.html" class="header-logo">
+        <img src="img/header-logo.png" alt="" class="header-logo__img"> </a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-list-li header-nav-list-li_dropdown">
+            <a href="#" class="header-nav-list-li__link">Venues
+              <span class="header-nav-list-li__caret">down</span>
+            </a>
+            <!-- begin header-nav-list-dropdown -->
+            <ul class="header-nav-list-dropdown">
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Ala Moana</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Beretania</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Kaimuki</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Kualoa</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Sharks Cove</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Waimanalo</a>
+              </li>
+              <li class="header-nav-list-dropdown-li">
+                <a href="#" class="header-nav-list-dropdown-li__link">Waimea Vally</a>
+              </li>
+            </ul>
+            <!-- end header-nav-list-dropdown -->
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Activities</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Restaurants</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Shopping</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Car Rentals</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Transportation</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Servicer</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Food Delivery</a>
+          </li>
+          <li class="header-nav-list-li">
+            <a href="#" class="header-nav-list-li__link">Information</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header-nav__button" type="button"> Menu
+        <span class="lines"></span>
+      </button>
+    </header>
+    <!-- end header -->
     <!-- BEGIN content -->
     <main class="out">
+      <section class="first-screen first-screen_index" style="background-image: url('img/header-bg.jpg');">
+        <h1 class="first-screen__title">Circle Island Guided Tour </h1>
+        <a href="#index-screen" class="first-screen-link link-to">
+          <span class="first-screen-link__text">Start here</span>
+          <span class="first-screen-link-img">
+            <svg class="icon icon-icon-mouse">
+              <use xlink:href="img/sprite.svg#icon-icon-mouse"></use>
+            </svg>
+          </span>
+        </a>
+        <div class="first-screen-weather">
+          <img src="img/weather.png" alt=""> </div>
+      </section>
       <ul class="mobile-menu">
         <li class="mobile-menu-li">
           <a href="#" class="mobile-menu-li-link">
@@ -435,6 +462,23 @@
           </a>
         </div>
       </section>
+      <div class="index-screen">
+        <div class="container">
+          <!-- begin banners -->
+          <div class="banners">
+            <div class="banners__title">Ads</div>
+            <div class="banners-wrapper">
+              <a href="#" class="banners-wrapper__banner banner">
+                <img src="img/banner-1.jpg" class="banner__img" alt=""> </a>
+              <a href="#" class="banners-wrapper__banner banner">
+                <img src="img/banner-2.jpg" class="banner__img" alt=""> </a>
+              <a href="#" class="banners-wrapper__banner banner">
+                <img src="img/banner-3.jpg" class="banner__img" alt=""> </a>
+            </div>
+          </div>
+          <!-- end banners -->
+        </div>
+      </div>
     </main>
     <!-- END content -->
     <!-- BEGIN scripts -->

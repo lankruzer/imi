@@ -39,7 +39,25 @@ $(document).ready(function() {
       }
     }
   });
-// smooth scrolling
+  // smooth scrolling
+
+  // fixed header
+  var scroll = 0;
+  var firstScreenHeight = $('.first-screen').height();
+  var firstScreenHeightPerc = firstScreenHeight / 10 * 2.5;
+  var header = $('.header');
+  console.log('test = ', firstScreenHeight);
+  $(window).scroll(function(event) {
+    scroll = $(window).scrollTop();
+    if (scroll + firstScreenHeightPerc > firstScreenHeight) {
+    	if (!$(header).hasClass('header_dark')) {
+    		$(header).addClass('header_dark');
+    	}
+    } else if ($(header).hasClass('header_dark')) {
+    	$(header).removeClass('header_dark');
+    }   
+  });
+  // fixed header
 
 	
 });
