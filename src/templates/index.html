@@ -56,7 +56,7 @@ title: Index page | imi
 		</li>
 	</ul>	
 
-	<section class="index-screen">
+	<section id="index-screen" class="index-screen">
 
 		<div class="container">
 		
@@ -97,6 +97,263 @@ title: Index page | imi
 
 			 {% include "partials/_ads.html" %}
 
+		</div>
+
+	</section>
+
+	<section class="index-items index-items_marine">
+		<div class="index-items-title">
+			<h2 class="index-items-title__title">
+				{{mixins.icon('icon-activities')}}
+				Activities Nearby
+			</h2>
+
+			<!-- begin flowers -->
+			<div class="flowers">
+				<div class="flower flower_left-border">
+					<img class="flower__img" src="img/palm-1.png" alt="">
+				</div>
+				<div class="flower flower_left">
+					<img class="flower__img" src="img/flower-1.png" alt="">
+				</div>
+				<div class="flower flower_right-half">
+					<img class="flower__img" src="img/flower-2.png" alt="">
+				</div>
+				<div class="flower flower_right">
+					<img class="flower__img" src="img/flower-3.png" alt="">
+				</div>
+				<div class="flower flower_right-border">
+					<img class="flower__img" src="img/palm-2.png" alt="">
+				</div>
+			</div>
+			<!-- end flowers -->
+		</div>
+
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-1.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+		</div>
+
+	</section>
+
+	<section class="index-items index-items_pink">
+		<div class="index-items-title">
+			<h2 class="index-items-title__title">
+				{{mixins.icon('icon-restaurants')}}
+				Restaurants Nearby
+			</h2>
+		</div>
+
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-2.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+		</div>
+
+	</section>
+
+	<section class="index-items index-items_yellow">
+		<div class="index-items-title">
+			<h2 class="index-items-title__title">
+				{{mixins.icon('icon-car')}}
+				Car Rentals Nearby
+			</h2>
+		</div>
+
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-3.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+		</div>
+
+	</section>
+
+	<section class="index-items index-items_green">
+		<div class="index-items-title">
+			<h2 class="index-items-title__title">
+				{{mixins.icon('icon-shopping')}}
+				Shopping Nearby
+			</h2>
+		</div>
+
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-2.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+		</div>
+
+	</section>
+
+	<section class="index-items index-items_sky">
+		<div class="index-items-title">
+			<h2 class="index-items-title__title">
+				{{mixins.icon('icon-transportation')}}
+				Transportation  Nearby
+			</h2>
+		</div>
+
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-3.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
 		</div>
 
 	</section>

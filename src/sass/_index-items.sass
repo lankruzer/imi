@@ -1,0 +1,297 @@
+.index-items
+	width: 100%
+	color: $text-light
+	&_marine
+		background-color: $marine
+		.index-item
+			background-color: $marine
+			&:hover
+				background-color: darken($marine, 5)
+				&::before
+					opacity: 1
+				.index-item-cost .icon
+					fill: darken($marine, 5)
+	&_pink
+		background-color: $pink
+		.index-item
+			background-color: $pink
+			&::after
+				background-image: linear-gradient(to bottom, transparent, transparent, $pink)
+			&::before
+				background-image: linear-gradient(to bottom, transparent, transparent, darken($pink, 5))
+			.index-item-cost .icon
+					fill: $pink
+			&:hover
+				background-color: darken($pink, 5)
+				&::before
+					opacity: 1
+				.index-item-cost .icon
+					fill: darken($pink, 5)
+	&_yellow
+		background-color: $yellow
+		.index-item
+			background-color: $yellow
+			&::after
+				background-image: linear-gradient(to bottom, transparent, transparent, $yellow)
+			&::before
+				background-image: linear-gradient(to bottom, transparent, transparent, darken($yellow, 5))
+			.index-item-cost .icon
+					fill: $yellow
+			&:hover
+				background-color: darken($yellow, 5)
+				&::before
+					opacity: 1
+				.index-item-cost .icon
+					fill: darken($yellow, 5)
+	&_green
+		background-color: $green
+		.index-item
+			background-color: $green
+			&::after
+				background-image: linear-gradient(to bottom, transparent, transparent, $green)
+			&::before
+				background-image: linear-gradient(to bottom, transparent, transparent, darken($green, 5))
+			.index-item-cost .icon
+					fill: $green
+			&:hover
+				background-color: darken($green, 5)
+				&::before
+					opacity: 1
+				.index-item-cost .icon
+					fill: darken($green, 5)
+	&_sky
+		background-color: $sky
+		.index-item
+			background-color: $sky
+			&::after
+				background-image: linear-gradient(to bottom, transparent, transparent, $sky)
+			&::before
+				background-image: linear-gradient(to bottom, transparent, transparent, darken($sky, 5))
+			.index-item-cost .icon
+					fill: $sky
+			&:hover
+				background-color: darken($sky, 5)
+				&::before
+					opacity: 1
+				.index-item-cost .icon
+					fill: darken($sky, 5)
+	&-title
+		position: relative
+		&__title
+			position: relative
+			z-index: 5
+			display: flex
+			justify-content: center
+			align-items: center
+			box-sizing: border-box
+			margin: 0
+			padding: 5px 15px
+			min-height: 155px
+			text-align: center
+			font-family: $lato
+			+fs(60)
+			+lh(60, 70)
+			font-weight: 800
+			font-style: italic
+			+r(1400)
+				min-height: 125px
+				+fs(50)
+			+r(1000)
+				min-height: 100px
+			+r(750)
+				min-height: 90px
+				+fs(40)
+			+r(500)
+				min-height: 80px
+				+fs(30)
+			+r(400)
+				+fs(28)
+			+r(320)
+				+fs(26)
+			.icon
+				margin-right: 15px
+				width: 75px
+				height: 75px
+				fill: $text-light
+				+r(1400)
+					width: 70px
+					height: 70px
+				+r(1000)
+					margin-right: 10px
+					width: 60px
+					height: 60px
+				+r(750)
+					width: 50px
+					height: 50px
+				+r(500)
+					width: 40px
+					height: 40px
+				+r(400)
+					width: 35px
+					height: 35px
+	&-wrapper
+		display: flex
+		flex-wrap: wrap
+		border-top: 3px solid $text-light	
+		&__item
+			box-sizing: border-box
+			width: 25%
+			// padding-bottom: 100%
+			min-height: 480px
+			border-bottom: 3px solid $text-light
+			&:not(:last-of-type)
+				border-right: 3px solid $text-light
+			+r(1200)
+				min-height: 400px
+			+r(1000)
+				min-height: 375px
+			+r(900)
+				width: 50%
+				&:not(:last-of-type)
+					border-right: 0
+				&:nth-of-type(odd)
+					border-right: 3px solid $text-light
+			+r(500)
+				min-height: 300px
+			+r(450)
+				width: 100%
+				&:nth-of-type(odd)
+					border-right: 0
+
+.index-item
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: center
+	box-sizing: border-box
+	padding: 20px
+	text-align: center
+	color: $text-light
+	text-decoration: none
+	overflow: hidden
+	transition: .25s
+	&::after,
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: linear-gradient(to bottom, transparent, transparent, $marine)
+		transition: .25s
+	&::before
+		z-index: 1
+		background-image: linear-gradient(to bottom, transparent, transparent, darken($marine, 5))
+		opacity: 0
+	&:hover
+		color: $text-light
+		text-decoration: none
+	&_banner
+		justify-content: center
+		&::before,
+		&::after
+			display: none
+	&-banner
+		position: absolute
+		top: 20px
+		right: 20px
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		font-family: $lato
+		+fs(18)
+		font-weight: 800
+		font-style: italic
+		color: $text-light
+		&::before,
+		&::after
+			content: ''
+			display: inline-block
+			width: 22px
+			height: 1px
+			background-color: $text-light
+		&::before
+			margin-right: 5px
+		&::after
+			margin-left: 5px
+	&__banner
+		max-width: 100%
+		max-height: 100%
+		width: auto
+		height: auto
+	& > *:not(.index-item__img):not(.index-item-cost):not(.index-item-banner)
+		position: relative
+		z-index: 5 
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 0
+		min-width: 100%
+		min-height: 100%
+		width: auto
+		height: auto
+		transform: translate(-50%, -50%)
+	&-cost
+		position: absolute
+		top: 20px
+		right: 20px
+		z-index: 2
+		min-width: 112px
+		min-height: 112px
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		+r(1400)
+			min-width: 105px
+			min-height: 105px
+		+r(1200)
+			min-width: 100px
+			min-height: 100px
+		+r(1000)
+			min-width: 90px
+			min-height: 90px
+		.icon
+			position: absolute
+			top: 0
+			right: 0
+			box-sizing: border-box
+			width: 100%
+			height: 100%
+			fill: $marine
+			stroke: $text-light
+			transition: .25s
+		&__text
+			position: relative
+			z-index: 5
+			font-family: $lato
+			+fs(22)
+			+lh(22, 22)
+			+ls(4)
+			font-weight: 800
+			font-style: italic
+			color: $text-light
+			+r(1400)
+				+fs(20)
+			+r(1200)
+				+fs(18)
+			+r(1000)
+				+fs(16)
+	&__title,
+	&__text
+		margin: 0
+		text-align: center
+		font-family: $lato
+		+fs(22)
+		+lh(22, 30)
+		font-weight: 800
+		font-style: italic
+		color: $text-light
+		+r(1200)
+			+fs(20)
+		+r(1000)
+			+fs(18)
