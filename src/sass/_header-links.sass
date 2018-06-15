@@ -9,13 +9,29 @@
 	box-sizing: border-box
 	padding: 20px 45px 
 	width: 100%
-	transition: .5s
+	border-bottom: 3px solid transition
+	transition: .75s
+	+r(1400)
+		padding: 15px 25px
+	+r(1200)
+		padding: 15px
+	+r(992)
+		padding: 10px 25px
 	&_dark
 		padding: 15px 45px 
 		background-color: $text-dark
+		border-bottom: 3px solid $text-light
 		.header
 			&-logo
 				max-width: 90px
+				+r(1600)
+					max-width: 80px
+				+r(1400)
+					max-width: 70px
+				+r(1200)
+					max-width: 50px
+				+r(992)
+					max-width: 60px
 			&-nav-list
 				&-dropdown
 					background-color: $text-dark
@@ -28,14 +44,6 @@
 							color: darken($sky, 40)
 						&__caret
 							border-top-color: darken($sky, 40)
-	+r(1400)
-		padding: 15px 25px
-	+r(1200)
-		padding: 15px
-	+r(992)
-		padding: 20px 25px
-	+r(768)
-		padding: 20px
 	&-logo
 		position: relative
 		z-index: 20
@@ -46,15 +54,11 @@
 		max-height: 119px
 		transition: .5s
 		+r(1600)
-			max-width: 100px
+			max-width: 90px
 		+r(1400)
-			max-width: 80px
+			max-width: 70px
 		+r(1200)
 			max-width: 60px
-		+r(992)
-			max-width: 100px
-		+r(768)
-			max-width: 70px
 		&__img
 			max-width: 100%
 			max-height: 100%
@@ -89,6 +93,8 @@
 				align-items: center
 			&-li
 				position: relative
+				+r(992)
+					margin-bottom: 15px
 				&__link
 					display: block
 					padding: 22px
@@ -106,17 +112,18 @@
 						+fs(18)
 					+r(1200)
 						+fs(16)
+					+r(992)
+						+fs(26)
 				&:hover
 					.header-nav-list-li
 						&__link
 							color: $text-dark
+							+r(992)
+								color: darken($sky, 40)
 						&__caret
 							border-top-color: $text-dark
-						// .header_dark 
-						// 	.header-nav-list-li__link
-						// 		color: darken($sky, 40)
-						// 	.header-nav-list-li__caret
-						// 		border-top-color: darken($sky, 40)
+							+r(992)
+								border-top-color: darken($sky, 40)
 				&__caret
 					display: inline-block
 					vertical-align: middle
@@ -129,11 +136,16 @@
 						left: 5px solid transparent
 						right: 5px solid transparent
 					background-color: transparent
-				&_dropdown:hover
-					.header-nav-list-dropdown
-						opacity: 1
-						visibility: visible
-						transform: translateY(0)
+				+rmin(992)
+					&_dropdown
+						&:hover
+							.header-nav-list-dropdown
+								opacity: 1
+								visibility: visible
+								transform: translateY(0)
+				+r(992)
+					&_dropdown .header-nav-list-li__link
+						text-align: center
 			&-dropdown
 				position: absolute
 				top: 100%
@@ -147,6 +159,14 @@
 				transform: translateY(-100%)
 				overflow-y: auto
 				visibility: hidden
+				+r(992)
+					position: static
+					display: none
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+					transition: none
+					// &.is-show
 				&-li
 					&__link
 						display: block
@@ -158,18 +178,20 @@
 						text-decoration: none
 						color: $text-light
 						transition: .25s
+						+r(992)
+							text-align: center
 						&:hover
 							color: $text-dark
-
-
+							+r(992)
+								color: darken($sky, 40)
 		&__button
 			display: none
 			+r(992)
 				position: relative
 				z-index: 20
 				display: block
-				width: 78px
-				height: 50px
+				width: 68px
+				height: 40px
 				+fs(0)
 				+lh(0, 0)
 				background-color: transparent
