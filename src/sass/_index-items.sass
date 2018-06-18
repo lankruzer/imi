@@ -75,6 +75,8 @@
 					opacity: 1
 				.index-item-cost .icon
 					fill: darken($sky, 5)
+	&_bg-transparent
+		background-color: transparent!important
 	&-title
 		position: relative
 		&__title
@@ -151,14 +153,17 @@
 		&__item
 			box-sizing: border-box
 			width: 25%
-			// width: 100%
 			min-height: 480px
 			border-bottom: 3px solid $text-light
-			// &:not(:last-of-type):not(.slick-slide)
 			&:not(:nth-of-type(4n)):not(.slick-slide)
 				border-right: 3px solid $text-light
 			+r(1200)
+				width: calc(100% / 3)
 				min-height: 400px
+				&:not(:nth-of-type(4n)):not(.slick-slide)
+					border-right: 0
+				&:not(:nth-of-type(3n)):not(.slick-slide)
+					border-right: 3px solid $text-light
 			+r(1000)
 				min-height: 375px
 			+r(992)
@@ -167,19 +172,36 @@
 						top: 60px
 						bottom: 60px
 					min-height: auto
-			// +r(900)
-			// 	width: 50%
-			// 	&:not(:last-of-type)
-			// 		border-right: 0
-			// 	&:nth-of-type(odd)
-			// 		border-right: 3px solid $text-light
-			// +r(500)
-			// 	min-height: 300px
-			// +r(450)
-			// 	width: 100%
-			// 	&:nth-of-type(odd)
-			// 		border-right: 0
+		&.index-items-wrapper_activities
+			.index-items-wrapper__item
+				+r(768)
+					width: 50%
+					min-height: 350px
+					&:not(:nth-of-type(4n)):not(.slick-slide)
+						border-right: 0
+					&:not(:nth-of-type(3n)):not(.slick-slide)
+						border-right: 0
+					&:not(:nth-of-type(2n)):not(.slick-slide)
+						border-right: 3px solid $text-light
+				+r(450)
+					width: 100%
+					min-height: 350px
+					&:not(:nth-of-type(4n)):not(.slick-slide)
+						border-right: 0
+					&:not(:nth-of-type(3n)):not(.slick-slide)
+						border-right: 0
+					&:not(:nth-of-type(2n)):not(.slick-slide)
+						border-right: 0
+				&.index-item_banner
+					+r(992)
+						width: calc(100% / 3)!important
+					+r(768)
+						width: 50%!important
+					+r(450)
+						width: 100%!important
 
+
+			
 .index-item
 	position: relative
 	display: flex!important

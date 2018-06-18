@@ -1,0 +1,79 @@
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 50
+	height: 100vh
+	width: 100%
+	color: #fff
+	background-color: $text-dark
+	overflow-y: auto
+	transform: translateY(-100%)
+	transition: .25s
+	&.is-show
+		transform: translateY(0%)
+	&__close
+		display: block
+		margin: 35px 70px 70px auto
+		width: 68px
+		height: 40px
+		+fs(0)
+		+lh(0, 0)
+		background-color: transparent
+		+r(768)
+			margin: 15px 15px 15px auto
+			width: 60px
+		.lines
+			transition: .25s
+		&:hover
+			.lines
+				transform: rotate(180deg)
+				&::before,
+				&::after
+					background-color: darken($sky, 40)
+		
+
+.activities-filter
+	margin-bottom: 100px
+	display: flex
+	flex-direction: column
+	align-items: center
+	box-sizing: border-box
+	padding: 0 15px
+	width: 100%
+	&-label
+		display: block
+		margin-bottom: 25px
+		width: 50%
+		+fs(35)
+		+lh(35, 50)
+		+ls(4)
+		color: $text-light
+		cursor: pointer
+		transition: .25s
+		+r(1200)
+			margin-bottom: 15px
+			+fs(28)
+		+r(900)
+			width: 75%
+			+fs(24)
+		+r(768)
+			width: 100%
+			+fs(20)
+		&__input
+			display: none
+			&:checked + .activities-filter-label__pseudo-input
+				opacity: 1
+		&__pseudo-input
+			display: inline-block
+			vertical-align: middle
+			transition: .25s
+			opacity: 0
+			.icon
+				fill: $text-light
+				transition: .25s
+		&:hover
+			color: darken($sky, 40)
+			.icon
+				fill: darken($sky, 40)
+

@@ -1,0 +1,32 @@
+.screen-filter
+	padding: 43px 0 40px
+	text-align: center
+	&__button
+		display: inline-block
+		vertical-align: middle
+		box-sizing: border-box
+		padding: 10px 22px
+		+fs(28)
+		+lh(28, 28)
+		font-style: italic
+		color: $text-dark
+		border: 2px solid $text-dark
+		border-radius: 4px
+		background-color: $text-light
+		transition: .25s
+		+r(992)
+			+fs(26)
+		+r(768)
+			+fs(22)
+		.icon
+			margin-bottom: -3px
+			fill: $text-dark
+			transition: .25s
+		&:hover
+			color: $text-light
+			background-color: $text-dark
+			.icon
+				fill: $text-light
+		&:active
+			border-color: darken($text-dark, 5)
+			background-color: darken($text-dark, 5)

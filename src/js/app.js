@@ -167,4 +167,22 @@ $(document).ready(function() {
     });
   }
 
+  if (document.querySelector('.screen-filter__button') && document.querySelector('.overlay')) {
+    var overlay = $('.overlay');
+    var overlayClose = $(overlay).find('.overlay__close');
+    var filterBtn = $('.screen-filter__button');
+
+    $(filterBtn).click(function(event) {
+      $(overlay).addClass('is-show');
+      $(overlayClose).addClass('is-active');
+      $('body').toggleClass('is-no-scroll');
+    });
+
+    $(overlayClose).click(function() {
+      $(this).removeClass('is-active');
+      $(overlay).removeClass('is-show');
+      $('body').toggleClass('is-no-scroll');
+    });
+  }
+
 });

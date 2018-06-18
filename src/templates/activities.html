@@ -14,7 +14,7 @@ title: Activities | imi
 	<!-- begin screen-filter -->
 	<div class="screen-filter">
 		<div class="container">
-			<button class="screen-filter__button">
+			<button class="screen-filter__button" type="button">
 				{{mixins.icon('icon-filter')}}
 				Filter Categories
 			</button>
@@ -22,8 +22,8 @@ title: Activities | imi
 	</div>
 	<!-- end screen-filter -->
 
-	<div class="index-items index-items_marine">
-		<div class="index-items-wrapper">
+	<div class="index-items index-items_marine index-items_bg-transparent">
+		<div class="index-items-wrapper index-items-wrapper_activities">
 			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
 				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
 				<div class="index-item-cost">
@@ -169,5 +169,25 @@ title: Activities | imi
 		</div>
 	</div>
 
+
+	<!-- begin overlay -->
+	<div class="overlay">
+		<button class="overlay__close"><span class="lines"></span></button>
+		<form action="#" class="activities-filter">
+
+			{% import "data/data.html" as data %}
+		
+			{% for input in data.inputs %}
+			<label class="activities-filter-label">
+				<input class="activities-filter-label__input" type="radio" name="activities-filter-item" value="{{input.name}}">
+				<span class="activities-filter-label__pseudo-input">{{mixins.icon('icon-check')}}</span>
+				<span class="activities-filter-label__text">{{input.name}}</span>
+			</label>
+			{% endfor %}
+
+			
+		</form>
+	</div>
+	<!-- end overlay -->
 	
 {% endblock %}

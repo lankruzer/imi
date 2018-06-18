@@ -4,7 +4,7 @@
 	flex-direction: column
 	justify-content: space-between
 	align-items: center
-	min-height: 230px
+	min-height: 250px
 	height: auto
 	+image('header-bg.jpg')
 	+cover
@@ -17,8 +17,10 @@
 		align-items: flex-end
 		margin: auto auto 0
 		box-sizing: border-box
-		min-width: 410px
-		min-height: 60px
+		// min-width: 410px
+		max-width: 90%
+		padding: 20px 95px 0
+		// min-height: 70px
 		text-align: center
 		font-family: $lato
 		+fs(56)
@@ -27,17 +29,21 @@
 		font-weight: 800
 		color: $text-dark
 		background-color: $text-light
+		+r(1600)
+			padding: 20px 75px 0
+			+fs(54)
 		+r(1400)
-			padding: 0 25px
-			+fs(60)
+			padding: 20px 55px 0
+			+fs(52)
 		+r(1200)
-			padding: 0 15px
-			+fs(50)
+			padding: 20px 40px 0
+			+fs(48)
 		+r(992)
-			padding: 0 25px
-			+fs(40)
+			padding: 18px 30px 0
+			// +fs(40)
 		+r(768)
-			+fs(30)
+			padding: 15px 25px 0
+			+fs(40)
 	&-link
 		margin-bottom: 30px
 		text-align: center
