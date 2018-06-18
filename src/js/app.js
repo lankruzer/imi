@@ -3,6 +3,45 @@ import 'slick-carousel';
 
 $(document).ready(function() {
 
+  // smooth scrolling
+  // Select all links with hashes
+  $('a[href*="#"].link-to').click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname === this.hostname
+    ) {
+    // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    }
+  });
+  // smooth scrolling
+
+  // fixed header
+  var firstScreenHeightPerc = $('.first-screen-js').height() / 10 * 2.5;
+  var header = $('.header');
+ 
+  $(window).scroll(function(event) {
+    if ($(window).scrollTop() > firstScreenHeightPerc) {
+    	if (!$(header).hasClass('header_dark')) {
+    		$(header).addClass('header_dark');
+    	}
+    } else if ($(header).hasClass('header_dark')) {
+    	$(header).removeClass('header_dark');
+    }   
+  });
+  // fixed header
+
   // mobile-menu
   $('.header-nav__button').click(function() {
   	$('body').toggleClass('is-no-scroll');
@@ -66,48 +105,22 @@ $(document).ready(function() {
     ]
   });
 
-
-  // smooth scrolling
-  // Select all links with hashes
-  $('a[href*="#"].link-to').click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname === this.hostname
-    ) {
-    // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-      }
-    }
+  $('.slider-mobile-two').slick({
+  	slidesToShow: 2,
+  	slidesToScroll: 1,
+  	infinite: true,
+  	autoplay: false,
+  	autoplaySpeed: 7500,
+  	dots: false,
+  	arrows: false,
+  	responsive: [
+      {
+		    breakpoint: 450,
+	        settings: {
+	          slidesToShow: 1
+		    }
+	    }
+    ]
   });
-  // smooth scrolling
-
-  // fixed header
-  var scroll = 0;
-  var firstScreenHeight = $('.first-screen-js').height();
-  var firstScreenHeightPerc = firstScreenHeight / 10 * 2.5;
-  var header = $('.header');
- 
-  $(window).scroll(function(event) {
-    scroll = $(window).scrollTop();
-    if (scroll + firstScreenHeightPerc > firstScreenHeight) {
-    	if (!$(header).hasClass('header_dark')) {
-    		$(header).addClass('header_dark');
-    	}
-    } else if ($(header).hasClass('header_dark')) {
-    	$(header).removeClass('header_dark');
-    }   
-  });
-  // fixed header
-
 	
 });

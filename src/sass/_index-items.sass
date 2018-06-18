@@ -132,35 +132,55 @@
 	&-wrapper
 		display: flex
 		flex-wrap: wrap
-		border-top: 3px solid $text-light	
+		border-top: 3px solid $text-light
+		overflow: hidden
+		+r(992)
+			&:not(.index-items-wrapper_mobile)
+				display: none
+		&_mobile
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+			display: block
+			width: 100%
+			opacity: 0
+			+r(992)
+				position: static
+				opacity: 1
 		&__item
 			box-sizing: border-box
 			width: 25%
-			// padding-bottom: 100%
 			min-height: 480px
 			border-bottom: 3px solid $text-light
-			&:not(:last-of-type)
+			&:not(:last-of-type):not(.slick-slide)
 				border-right: 3px solid $text-light
 			+r(1200)
 				min-height: 400px
 			+r(1000)
 				min-height: 375px
-			+r(900)
-				width: 50%
-				&:not(:last-of-type)
-					border-right: 0
-				&:nth-of-type(odd)
-					border-right: 3px solid $text-light
-			+r(500)
-				min-height: 300px
-			+r(450)
-				width: 100%
-				&:nth-of-type(odd)
-					border-right: 0
+			+r(992)
+				&.index-item_banner
+					padding:
+						top: 60px
+						bottom: 60px
+					min-height: auto
+			// +r(900)
+			// 	width: 50%
+			// 	&:not(:last-of-type)
+			// 		border-right: 0
+			// 	&:nth-of-type(odd)
+			// 		border-right: 3px solid $text-light
+			// +r(500)
+			// 	min-height: 300px
+			// +r(450)
+			// 	width: 100%
+			// 	&:nth-of-type(odd)
+			// 		border-right: 0
 
 .index-item
 	position: relative
-	display: flex
+	display: flex!important
 	flex-direction: column
 	justify-content: flex-end
 	align-items: center
@@ -190,6 +210,8 @@
 		text-decoration: none
 	&_banner
 		justify-content: center
+		+r(992)
+			width: 100%!important
 		&::before,
 		&::after
 			display: none
@@ -301,6 +323,11 @@
 		+r(1000)
 			+fs(18)
 
+
+.slick-current
+	.index-item
+		+rmin(450)
+			border-right: 3px solid $text-light
 
 @keyframes rotate
 	100%
