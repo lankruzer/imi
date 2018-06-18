@@ -185,4 +185,40 @@ $(document).ready(function() {
     });
   }
 
+  if (document.querySelector('.slider-big')) {
+  	$('.slider-big').slick({
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+  		infinite: true,
+  		autoplay: true,
+      	autoplaySpeed: 7500,
+    	dots: false,
+    	arrows: false,
+    	fade: true,
+  		asNavFor: '.slider-small'
+  	});
+  }
+
+  if (document.querySelector('.slider-small')) {
+  	$('.slider-small').slick({
+  		slidesToShow: 4,
+  		slidesToScroll: 1,
+  		infinite: true,
+  		autoplay: true,
+      	autoplaySpeed: 7500,
+    	dots: false,
+    	arrows: false,
+  		asNavFor: '.slider-big',
+  		focusOnSelect: true,
+  		responsive: [
+        {
+  		    breakpoint: 450,
+  	        settings: {
+  	          slidesToShow: 3
+  		    }
+  	    }
+      ]
+  	});
+  }
+
 });

@@ -173,20 +173,22 @@ title: Activities | imi
 	<!-- begin overlay -->
 	<div class="overlay">
 		<button class="overlay__close"><span class="lines"></span></button>
-		<form action="#" class="activities-filter">
+		<div class="overlay__content">
+			<form action="#" class="activities-filter">
 
-			{% import "data/data.html" as data %}
-		
-			{% for input in data.inputs %}
-			<label class="activities-filter-label">
-				<input class="activities-filter-label__input" type="radio" name="activities-filter-item" value="{{input.name}}">
-				<span class="activities-filter-label__pseudo-input">{{mixins.icon('icon-check')}}</span>
-				<span class="activities-filter-label__text">{{input.name}}</span>
-			</label>
-			{% endfor %}
-
+				{% import "data/data.html" as data %}
 			
-		</form>
+				{% for input in data.inputs %}
+				<label class="activities-filter-label">
+					<input class="activities-filter-label__input" type="radio" name="activities-filter-item" value="{{input.name}}">
+					<span class="activities-filter-label__pseudo-input">{{mixins.icon('icon-check')}}</span>
+					<span class="activities-filter-label__text">{{input.name}}</span>
+				</label>
+				{% endfor %}
+
+				
+			</form>
+		</div>
 	</div>
 	<!-- end overlay -->
 	

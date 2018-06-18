@@ -1,27 +1,154 @@
 ---
-title: Activities-inner page | imi
+title: Prince Kuhio Sunset Dinner Cruise | imi
 ---
 {% extends "layouts/_index-layout.html" %}
 
 {% block content %}
+
+	<!-- begin first-screen -->
+	<section class="first-screen first-screen-js">
+		<h1 class="first-screen__title">Prince Kuhio Sunset Dinner Cruise</h1>
+	</section>
+	<!-- end first-screen -->
+
+	<div class="container">
+
+		<div class="activities-wrapper">
+			<!-- begin activities-wrapper__content -->
+			<article class="activities-wrapper__content activities-content">
+				
+				<!-- begin activities-content__slider-big -->
+				<div class="activities-content__slider-big">
+
+					<div class="activities-content-icons">
+						<div class="activities-content-icons__icon activities-icon"> 
+							<div class="activities-icon__icon-bg">
+								{{mixins.icon('arrow-bg-border')}}
+							</div>
+
+							<div class="activities-icon__icon">
+								{{mixins.icon('icon-mark')}}
+							</div>
+
+							<span class="activities-icon__text">Ala Moana Harbor</span>
+						</div>
+
+						<div class="activities-content-icons__icon activities-icon"> 
+							<div class="activities-icon__icon-bg">
+								{{mixins.icon('arrow-bg-border')}}
+							</div>
+
+							<div class="activities-icon__icon">
+								{{mixins.icon('icon-time')}}
+							</div>
+
+							<span class="activities-icon__text">2 hours</span>
+						</div>
+					</div>
+
+					<div class="slider-big">
+						<div class="slider-big-slide">
+							<div class="slider-big-slide__img">
+								<img src="img/activities-inner-1.jpg" alt="">
+							</div>
+						</div>
+
+						<div class="slider-big-slide">
+							<div class="slider-big-slide__img">
+								<img src="img/activities-inner-1.jpg" alt="">
+							</div>
+						</div>
+
+						<div class="slider-big-slide">
+							<div class="slider-big-slide__img">
+								<img src="img/activities-inner-1.jpg" alt="">
+							</div>
+						</div>
+
+						<div class="slider-big-slide">
+							<div class="slider-big-slide__img">
+								<img src="img/activities-inner-1.jpg" alt="">
+							</div>
+						</div>
+
+						<div class="slider-big-slide">
+							<div class="slider-big-slide__img">
+								<img src="img/activities-inner-1.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end activities-content__slider-big -->
+				
+				<!-- begin activities-content__slider-small -->
+				<div class="activities-content__slider-small slider-small">
+					<div class="slider-small-slide">
+						<div class="slider-small-slide__img">
+							<img src="img/activities-inner-1.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="slider-small-slide">
+						<div class="slider-small-slide__img">
+							<img src="img/activities-inner-1.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="slider-small-slide">
+						<div class="slider-small-slide__img">
+							<img src="img/activities-inner-1.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="slider-small-slide">
+						<div class="slider-small-slide__img">
+							<img src="img/activities-inner-1.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="slider-small-slide">
+						<div class="slider-small-slide__img">
+							<img src="img/activities-inner-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- end activities-content__slider-small -->
+
+				<!-- begin activities-cotntent-text -->
+				<div class="activities-content-text">
+					<h2 class="activities-content-text__title">Venue Description:</h2>
+					<div class="activities-content-text__text">Hot spot provider about us info, address, phone, clickable link to own page if paid advertiser.specials on location can be added here in a form of clickable banners or downloadable coupons code. Hot spot provider about us info, address, phone, clickable link to own page if paid advertiser.specials on location can be added here in a form of clickable banners or downloadable coupons code. 
+					</div>
+				</div>
+				<!-- end activities-cotntent-text -->
+
+			</article>
+			<!-- end activities-wrapper__content -->
+			
+			<!-- begin activities-wrapper__aside -->
+			<aside class="activities-wrapper__aside activities-aside">
+				<div class="activities-aside__cost">
+					<span class="activities-aside__cost-text">161.50$</span>
+
+					<!-- begin activities-aside-flowers -->
+					<div class="activities-aside-flowers">
+						<div class="activities-aside-flowers__flower activities-aside-flowers__flower_left">
+							<img src="img/flower-3.png" alt="">
+						</div>
+						<div class="activities-aside-flowers__flower activities-aside-flowers__flower_right">
+							<img src="img/flower-2.png" alt="">
+						</div>
+					</div>
+					<!-- end activities-aside-flowers -->
+				</div>
+
+				<div class="activities-aside__iframe">
+					<iframe seamless="" frameborder="0" width="100%" height="480px" class="rezdy" src="https://bestofhawaii.rezdy.com/calendarWidget/191757?iframe=true&amp;targetFrame=_top&amp;agentCode=IMICLICK" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 580px;"></iframe>
+				</div>
+			</aside>
+			<!-- end activities-wrapper__aside -->
+			
+		</div>
+	</div>
 	
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
-
 {% endblock %}
