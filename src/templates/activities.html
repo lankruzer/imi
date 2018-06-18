@@ -4,24 +4,170 @@ title: Activities | imi
 {% extends "layouts/_index-layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
+
+	<!-- begin first-screen -->
+	<section class="first-screen first-screen-js">
+		<h1 class="first-screen__title">Activities</h1>
+	</section>
+	<!-- end first-screen -->
+
+	<!-- begin screen-filter -->
+	<div class="screen-filter">
+		<div class="container">
+			<button class="screen-filter__button">
+				{{mixins.icon('icon-filter')}}
+				Filter Categories
+			</button>
+		</div>
+	</div>
+	<!-- end screen-filter -->
+
+	<div class="index-items index-items_marine">
+		<div class="index-items-wrapper">
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-1.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-2.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-1.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-1.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-2.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item index-item_banner">
+				<img src="img/index-banner-2.png" alt="" class="index-item__banner">
+				<div class="index-item-banner"><span class="index-item-banner__text">Ad</span></div>
+			</a>
+
+
+			<a href="activities-inner.html" class="index-items-wrapper__item index-item">
+				<img src="img/index-activ-3.jpg" alt="" class="index-item__img">
+				<div class="index-item-cost">
+					{{mixins.icon('arrow-bg-border')}}
+					<span class="index-item-cost__text">144.95$</span>
+				</div>
+				<h2 class="index-item__title">Polynesian Cultural Center</h2>
+				<div class="index-item__text">Admission & Show Package + Free Dinner</div>
+			</a>
+		</div>
+	</div>
 
 	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
-
 {% endblock %}

@@ -4,22 +4,29 @@
 	flex-direction: column
 	justify-content: space-between
 	align-items: center
-	min-height: 100vh
+	min-height: 230px
 	height: auto
 	+image('header-bg.jpg')
 	+cover
 	background-position: center
+	&-index
+		min-height: 100vh
 	&__title
-		margin: auto
-		padding: 0 45px
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		margin: auto auto 0
 		box-sizing: border-box
+		min-width: 410px
+		min-height: 60px
 		text-align: center
 		font-family: $lato
-		+fs(70)
-		+lh(70, 90)
+		+fs(56)
+		+lh(56, 56)
 		+ls(4)
-		fotn-weight: 800
-		color: $text-light
+		font-weight: 800
+		color: $text-dark
+		background-color: $text-light
 		+r(1400)
 			padding: 0 25px
 			+fs(60)
