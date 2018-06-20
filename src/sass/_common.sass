@@ -3,11 +3,19 @@ body
 	flex-direction: column
 	min-height: 100vh
 	font-family: $lato
-	+fs(28.9)
-	+lh(28.9, 36)
-	+ls(4)
+	// +fs(28.9)
+	// +lh(28.9, 36)
+	// +ls(4)
+	// font-style: italic
+	// font-weight: 400
+ //    color: #454545
+
+ 	font-family: $lato
+	+fs(18)
+	+lh(18, 26)
 	font-style: italic
 	font-weight: 400
+	color: #454545
 	+image('body-bg.jpg')
 	background-position: bottom
 	background-size: 100% auto
@@ -22,3 +30,6 @@ body
 	box-sizing: border-box
 	width: 100%
 	max-width: 1140px
+
+.content
+	padding-top: 50px

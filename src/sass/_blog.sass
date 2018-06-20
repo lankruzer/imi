@@ -1,0 +1,88 @@
+.blog-wrapper
+	display: flex
+	flex-wrap: wrap
+	&__content
+		box-sizing: border-box
+		padding-right: 30px
+		width: 80%
+	&__aside
+		box-sizing: border-box
+		width: 20%
+
+.blog-post
+	display: block
+	margin-bottom: 45px
+	width: 100%
+	&__img
+		display: block
+		margin-bottom: 15px
+		width: 100%
+		img
+			display: block
+			width: 100%
+			height: auto
+	&-text
+		&__title
+			margin: 0 0 10px
+			display: block
+			+fs(0)
+		&__link
+			display: inline-block
+			font-family: $lato
+			font-size: 22px
+			line-height: 1.18182
+			font-weight: 800
+			font-style: italic
+			color: #454545
+			text-decoration: none
+			transition: .25s
+			&:hover
+				color: $text-dark
+				text-decoration: underline
+
+	.btn
+		margin-top: 5px
+		display: inline-block
+		vertical-align: middle
+		box-sizing: border-box
+		padding: 6px 22px 8px
+		+fs(22)
+		+lh(22, 22)
+		font-style: italic
+		color: $text-dark
+		border: 2px solid $text-dark
+		border-radius: 4px
+		background-color: $text-light
+		text-decoration: none
+		transition: .25s
+		+r(992)
+			+fs(20)
+		+r(768)
+			+fs(18)
+		&:hover
+			color: $text-light
+			background-color: $text-dark
+		&:active
+			border-color: darken($text-dark, 5)
+			background-color: darken($text-dark, 5)
+
+.blog-categoies
+	text-align: left
+	color: $text-dark
+	&__th
+		padding: 10px
+		font-size: 22px
+	&__td
+		padding: 10px
+	&__tr
+		border-left: 1px solid $text-dark
+		&:not(:last-of-type)
+			border-bottom: 1px solid $text-dark
+	&__link
+		font-size: 18px
+		text-decoration: none
+		color: #454545
+		transition: .25s
+		&:hover
+			color: $text-dark
+			text-decoration: underline
