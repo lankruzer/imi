@@ -127,6 +127,7 @@
 				&__caret
 					display: inline-block
 					vertical-align: middle
+					margin-left: 4px
 					box-sizing: border-box
 					width: 0
 					height: 0
@@ -159,6 +160,8 @@
 				transform: translateY(-100%)
 				overflow-y: auto
 				visibility: hidden
+				+rmin(992)
+					background-color: #26AB7B
 				+r(992)
 					position: static
 					display: none
@@ -181,6 +184,8 @@
 							text-align: center
 						&:hover
 							color: $text-dark
+							+rmin(992)
+								color: darken($sky, 40)
 							+r(992)
 								color: darken($sky, 40)
 		&__button

@@ -197,7 +197,7 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
-	align-items: center
+	align-items: bottom
 	margin: 0 7.5px 30px
 	padding: 10px 5px 5px
 	+fs(20)
@@ -208,7 +208,23 @@
 		box-sizing: border-box
 		padding: 0 5px 5px
 		min-width: 25%
-		.icon
-			fill: $text-light
-		.fa
-			+fs(24)
+		text-align: center
+	&__icon
+		display: flex
+		justify-content: center
+		align-self: flex-end
+		text-align: center			
+	img
+		max-width: 40px
+		max-height: 40px
+		width: 100%
+		height: auto
+	.icon
+		max-width: 40px
+		max-height: 40px
+		width: 100%
+		height: auto
+		fill: $text-light
+
+	.fa
+		+fs(40)
